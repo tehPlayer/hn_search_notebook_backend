@@ -22,11 +22,7 @@ class SearchResultsController < ApplicationController
     search_result = SearchResult.find(params[:id])
     outcome = SearchResults::Destroy.run(search_result: search_result)
 
-    if outcome.success?
-      render json: { status: 'ok' }
-    else
-      render json: { status: 'error', details: outcome.errors.symbolic }, status: 422
-    end
+    render json: { status: 'ok' }
   end
 
   protected

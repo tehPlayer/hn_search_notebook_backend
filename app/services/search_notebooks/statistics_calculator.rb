@@ -35,13 +35,9 @@ module SearchNotebooks
     end
 
     def calculate_average(records)
-      if records.empty?
-        0.0
-      else
-        size = records.size
-        total_hits = records.sum(&:hits)
-        total_hits / size.to_f
-      end
+      size = records.size
+      total_hits = records.sum(&:hits)
+      total_hits / size.to_f
     end
   end
 end

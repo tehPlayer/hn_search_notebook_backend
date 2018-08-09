@@ -3,13 +3,15 @@
 module HN
   class Interface
     class << self
-      def items(id)
-        call_api("items/#{id}")
-      end
+      # def items(id)
+      #   # unused
+      #   call_api("items/#{id}")
+      # end
 
-      def users(username)
-        call_api("users/#{username}")
-      end
+      # def users(username)
+      #   # unused
+      #   call_api("users/#{username}")
+      # end
 
       def search(search_params)
         call_api('search', search_params)
