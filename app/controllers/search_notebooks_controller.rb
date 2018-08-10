@@ -4,23 +4,22 @@ class SearchNotebooksController < ApplicationController
   def index
     @notebooks = SearchNotebook.page(params[:page])
 
-    render jsonapi: @notebooks, class: { SearchNotebook: SerializableSimpleSearchNotebook }
+    render json: @notebooks
   end
 
   def show
     @notebook = SearchNotebook.includes(search_results: :tags).find(params[:id])
 
-    render  jsonapi: @notebook,
-            include: { search_results: :tags }
+    render json: @notebook, serializer: SearchNotebookWithResultsSerializer
   end
 
   def create
     @notebook = SearchNotebook.new(search_notebook_params)
 
     if @notebook.save
-      render jsonapi: @notebook, class: { SearchNotebook: SerializableSimpleSearchNotebook }
+      render json: @notebook
     else
-      render jsonapi_errors: @notebook.errors, status: 422
+      render json: @notebook.errors, status: 422
     end
   end
 
