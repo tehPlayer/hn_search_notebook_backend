@@ -12,7 +12,7 @@ describe SearchNotebooksController, type: :controller do
 
       it 'returns empty collection' do
         get :index
-        expect(response_json[:data]).to be_empty
+        expect(response_json).to be_empty
       end
     end
 
@@ -28,7 +28,7 @@ describe SearchNotebooksController, type: :controller do
 
       it 'returns objects' do
         get :index
-        expect(response_json[:data].size).to eq(2)
+        expect(response_json.size).to eq(2)
       end
     end
   end
@@ -51,12 +51,12 @@ describe SearchNotebooksController, type: :controller do
 
       it 'returns objects' do
         get :show, params: { id: search_notebook.id }
-        expect(response_json[:data][:id]).to eq(search_notebook.id.to_s)
+        expect(response_json[:id]).to eq(search_notebook.id)
       end
 
       it 'includes search results' do
         get :show, params: { id: search_notebook.id }
-        expect(response_json[:included].first[:type]).to eq('search_results')
+        expect(response_json).to include(:search_results)
       end
     end
   end
@@ -75,7 +75,7 @@ describe SearchNotebooksController, type: :controller do
 
       it 'returns errors on invalid request' do
         post :create, params: { search_notebook: { title: nil } }
-        expect(response_json[:errors].first[:title]).to be_present
+        expect(response_json[:title].first).to eq("can't be blank")
       end
     end
 
@@ -93,7 +93,7 @@ describe SearchNotebooksController, type: :controller do
 
       it 'returns object' do
         post :create, params: { search_notebook: { title: 'Test' } }
-        expect(response_json[:data][:id]).to be_present
+        expect(response_json[:id]).to be_present
       end
     end
   end

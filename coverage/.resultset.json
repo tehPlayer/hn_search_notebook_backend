@@ -17,6 +17,12 @@
         1,
         10,
         null,
+        10,
+        2,
+        null,
+        8,
+        null,
+        null,
         null
       ],
       "/Users/marcinadamczyk/Work/hn_search_notebook_backend/app/controllers/search_notebooks_controller.rb": [
@@ -33,7 +39,6 @@
         4,
         null,
         3,
-        null,
         null,
         null,
         1,
@@ -297,11 +302,11 @@
         1,
         40,
         40,
-        38,
-        38,
-        38,
+        36,
+        36,
+        36,
         null,
-        2,
+        4,
         null,
         40,
         null,
@@ -553,31 +558,31 @@
         null,
         null,
         1,
-        45,
-        45,
-        45,
+        43,
+        43,
+        43,
         null,
-        45,
-        null,
-        null,
-        1,
-        null,
-        1,
-        45,
+        43,
         null,
         null,
         1,
         null,
-        130,
+        1,
+        43,
         null,
         null,
         1,
-        45,
-        45,
-        45,
-        45,
         null,
-        45,
+        127,
+        null,
+        null,
+        1,
+        43,
+        43,
+        43,
+        43,
+        null,
+        43,
         null,
         null,
         null
@@ -689,10 +694,9 @@
         1,
         null
       ],
-      "/Users/marcinadamczyk/Work/hn_search_notebook_backend/app/serializable/serializable_simple_search_notebook.rb": [
+      "/Users/marcinadamczyk/Work/hn_search_notebook_backend/app/serializers/search_notebook_serializer.rb": [
         null,
         null,
-        1,
         1,
         1,
         null
@@ -722,19 +726,19 @@
         1,
         null
       ],
-      "/Users/marcinadamczyk/Work/hn_search_notebook_backend/app/serializable/serializable_search_notebook.rb": [
+      "/Users/marcinadamczyk/Work/hn_search_notebook_backend/app/serializers/search_notebook_with_results_serializer.rb": [
         null,
         null,
         1,
         1,
         null
       ],
-      "/Users/marcinadamczyk/Work/hn_search_notebook_backend/app/serializable/serializable_search_result.rb": [
+      "/Users/marcinadamczyk/Work/hn_search_notebook_backend/app/serializers/search_result_serializer.rb": [
         null,
         null,
         1,
         1,
-        1,
+        null,
         1,
         6,
         null,
@@ -826,6 +830,6 @@
         null
       ]
     },
-    "timestamp": 1533858169
+    "timestamp": 1533928911
   }
 }

@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-08-10T01:42:49+02:00">2018-08-10T01:42:49+02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-08-10T21:21:51+02:00">2018-08-10T21:21:51+02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.02
+         3.97
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>27</b> files in total.
-    <b>361</b> relevant lines. 
-    <span class="green"><b>361</b> lines covered</span> and
+    <b>362</b> relevant lines. 
+    <span class="green"><b>362</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -63,7 +63,7 @@
       <tr>
         <td class="strong"><a href="#dbc38abb1b08447cb8cdb24b46f20bec1809697d" class="src_link" title="app/controllers/search_notebooks_controller.rb">app/controllers/search_notebooks_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>42</td>
+        <td>41</td>
         <td>20</td>
         <td>20</td>
         <td>0</td>
@@ -117,7 +117,7 @@
         <td>17</td>
         <td>17</td>
         <td>0</td>
-        <td>16.9</td>
+        <td>16.6</td>
       </tr>
       
       <tr>
@@ -167,11 +167,11 @@
         <td>22</td>
         <td>22</td>
         <td>0</td>
-        <td>26.9</td>
+        <td>25.8</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#3ced950470a458586f54e08bc66a221037762a25" class="src_link" title="app/serializable/serializable_search_notebook.rb">app/serializable/serializable_search_notebook.rb</a></td>
+        <td class="strong"><a href="#c95436862872a17ddfeb2044bb6376f2536ad36f" class="src_link" title="app/serializers/search_notebook_serializer.rb">app/serializers/search_notebook_serializer.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>5</td>
         <td>2</td>
@@ -181,23 +181,23 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#1510056b71eff69cac9bc3abbd1f00ed8e74e489" class="src_link" title="app/serializable/serializable_search_result.rb">app/serializable/serializable_search_result.rb</a></td>
+        <td class="strong"><a href="#821c8ce1c5dd6b1055af695af0d55596893751c1" class="src_link" title="app/serializers/search_notebook_with_results_serializer.rb">app/serializers/search_notebook_with_results_serializer.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>5</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#cd4febcf66df0adc7151753446b55fa76e3f6c2e" class="src_link" title="app/serializers/search_result_serializer.rb">app/serializers/search_result_serializer.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>9</td>
-        <td>5</td>
-        <td>5</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
-        <td>2.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#936d32883c4ce7eeffe29c688530c1540b00982e" class="src_link" title="app/serializable/serializable_simple_search_notebook.rb">app/serializable/serializable_simple_search_notebook.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>6</td>
-        <td>3</td>
-        <td>3</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>2.3</td>
       </tr>
       
       <tr>
@@ -303,11 +303,11 @@
       <tr>
         <td class="strong"><a href="#555377e4a7443c418721fb4a1ed40175f4db2ba5" class="src_link" title="spec/support/controller_support.rb">spec/support/controller_support.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
-        <td>3</td>
-        <td>3</td>
+        <td>13</td>
+        <td>6</td>
+        <td>6</td>
         <td>0</td>
-        <td>4.0</td>
+        <td>5.3</td>
       </tr>
       
       <tr>
@@ -492,7 +492,7 @@
         <li class="covered" data-hits="4" data-linenumber="7">
           <span class="hits">4</span>
           
-          <code class="ruby">    render jsonapi: @notebooks, class: { SearchNotebook: SerializableSimpleSearchNotebook }</code>
+          <code class="ruby">    render json: @notebooks</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -528,178 +528,172 @@
         <li class="covered" data-hits="3" data-linenumber="13">
           <span class="hits">3</span>
           
-          <code class="ruby">    render  jsonapi: @notebook,</code>
+          <code class="ruby">    render json: @notebook, serializer: SearchNotebookWithResultsSerializer</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">            include: { search_results: :tags }</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="18">
+        <li class="covered" data-hits="6" data-linenumber="17">
           <span class="hits">6</span>
           
           <code class="ruby">    @notebook = SearchNotebook.new(search_notebook_params)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="20">
+        <li class="covered" data-hits="5" data-linenumber="19">
           <span class="hits">5</span>
           
           <code class="ruby">    if @notebook.save</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="21">
+        <li class="covered" data-hits="3" data-linenumber="20">
           <span class="hits">3</span>
           
-          <code class="ruby">      render jsonapi: @notebook, class: { SearchNotebook: SerializableSimpleSearchNotebook }</code>
+          <code class="ruby">      render json: @notebook</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="23">
+        <li class="covered" data-hits="2" data-linenumber="22">
           <span class="hits">2</span>
           
-          <code class="ruby">      render jsonapi_errors: @notebook.errors, status: 422</code>
+          <code class="ruby">      render json: @notebook.errors, status: 422</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="28">
+        <li class="covered" data-hits="3" data-linenumber="27">
           <span class="hits">3</span>
           
           <code class="ruby">    @notebook = SearchNotebook.find(params[:id])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="30">
+        <li class="covered" data-hits="2" data-linenumber="29">
           <span class="hits">2</span>
           
           <code class="ruby">    @notebook.destroy</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="32">
+        <li class="covered" data-hits="2" data-linenumber="31">
           <span class="hits">2</span>
           
           <code class="ruby">    render json: { status: &#39;ok&#39; }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="34">
           <span class="hits">1</span>
           
           <code class="ruby">  def statistics; end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
           <code class="ruby">  protected</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="39">
+        <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
           <code class="ruby">  def search_notebook_params</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="40">
+        <li class="covered" data-hits="6" data-linenumber="39">
           <span class="hits">6</span>
           
           <code class="ruby">    params.require(:search_notebook).permit(:title)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">end</code>
@@ -1256,20 +1250,20 @@
           <code class="ruby">    if new_tags.any?</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="21">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="36" data-linenumber="21">
+          <span class="hits">36</span>
           
           <code class="ruby">      current_tags = tags.pluck(:name)</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="22">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="36" data-linenumber="22">
+          <span class="hits">36</span>
           
           <code class="ruby">      outcome = Tags::CollectionUpdate.run(new_tags: new_tags, current_tags: current_tags)</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="23">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="36" data-linenumber="23">
+          <span class="hits">36</span>
           
           <code class="ruby">      self.tags = outcome.result</code>
         </li>
@@ -1280,8 +1274,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="25">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="25">
+          <span class="hits">4</span>
           
           <code class="ruby">      self.tags = []</code>
         </li>
@@ -1903,20 +1897,20 @@
           <code class="ruby">    def execute</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="13">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="43" data-linenumber="13">
+          <span class="hits">43</span>
           
           <code class="ruby">      lookup</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="14">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="43" data-linenumber="14">
+          <span class="hits">43</span>
           
           <code class="ruby">      create</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="15">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="43" data-linenumber="15">
+          <span class="hits">43</span>
           
           <code class="ruby">      cleanup</code>
         </li>
@@ -1927,8 +1921,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="17">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="43" data-linenumber="17">
+          <span class="hits">43</span>
           
           <code class="ruby">      Tag.where(name: new_tags)</code>
         </li>
@@ -1963,8 +1957,8 @@
           <code class="ruby">    def lookup</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="23">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="43" data-linenumber="23">
+          <span class="hits">43</span>
           
           <code class="ruby">      @existing = Tag.where(name: new_tags).pluck(:name)</code>
         </li>
@@ -1993,8 +1987,8 @@
           <code class="ruby">      # We can use AR mass insert if needed</code>
         </li>
       
-        <li class="covered" data-hits="130" data-linenumber="28">
-          <span class="hits">130</span>
+        <li class="covered" data-hits="127" data-linenumber="28">
+          <span class="hits">127</span>
           
           <code class="ruby">      (new_tags - @existing).each { |t| Tag.create!(name: t) }</code>
         </li>
@@ -2017,26 +2011,26 @@
           <code class="ruby">    def cleanup</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="32">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="43" data-linenumber="32">
+          <span class="hits">43</span>
           
           <code class="ruby">      removed_tags = current_tags - new_tags</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="33">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="43" data-linenumber="33">
+          <span class="hits">43</span>
           
           <code class="ruby">      ids_to_check = Tag.where(name: removed_tags).pluck(:id)</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="34">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="43" data-linenumber="34">
+          <span class="hits">43</span>
           
           <code class="ruby">      tag_ids_in_use = Tagging.where(tag_id: ids_to_check).pluck(:tag_id)</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="35">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="43" data-linenumber="35">
+          <span class="hits">43</span>
           
           <code class="ruby">      unused_ids = ids_to_check - tag_ids_in_use</code>
         </li>
@@ -2047,8 +2041,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="37">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="43" data-linenumber="37">
+          <span class="hits">43</span>
           
           <code class="ruby">      Tag.where(id: unused_ids).destroy_all</code>
         </li>
@@ -2076,9 +2070,9 @@
 </div>
 
       
-        <div class="source_table" id="3ced950470a458586f54e08bc66a221037762a25">
+        <div class="source_table" id="c95436862872a17ddfeb2044bb6376f2536ad36f">
   <div class="header">
-    <h3>app/serializable/serializable_search_notebook.rb</h3>
+    <h3>app/serializers/search_notebook_serializer.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>2</b> relevant lines. 
@@ -2105,7 +2099,56 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">class SerializableSearchNotebook &lt; SerializableSimpleSearchNotebook</code>
+          <code class="ruby">class SearchNotebookSerializer &lt; ActiveModel::Serializer</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attributes :id, :title, :created_at</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="821c8ce1c5dd6b1055af695af0d55596893751c1">
+  <div class="header">
+    <h3>app/serializers/search_notebook_with_results_serializer.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># frozen_string_literal: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class SearchNotebookWithResultsSerializer &lt; SearchNotebookSerializer</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
@@ -2125,13 +2168,13 @@
 </div>
 
       
-        <div class="source_table" id="1510056b71eff69cac9bc3abbd1f00ed8e74e489">
+        <div class="source_table" id="cd4febcf66df0adc7151753446b55fa76e3f6c2e">
   <div class="header">
-    <h3>app/serializable/serializable_search_result.rb</h3>
+    <h3>app/serializers/search_result_serializer.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2154,31 +2197,31 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">class SerializableSearchResult &lt; JSONAPI::Serializable::Resource</code>
+          <code class="ruby">class SearchResultSerializer &lt; ActiveModel::Serializer</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  type &#39;search_results&#39;</code>
+          <code class="ruby">  attributes :id, :login_name, :karma, :url, :tags</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="5">
           
-          <code class="ruby">  attributes :login_name, :karma, :url, :created_at, :updated_at</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">  attribute :tags do</code>
+          <code class="ruby">  def tags</code>
         </li>
       
         <li class="covered" data-hits="6" data-linenumber="7">
           <span class="hits">6</span>
           
-          <code class="ruby">    @object.tags.map(&amp;:name)</code>
+          <code class="ruby">    object.tags.map(&amp;:name)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -2188,61 +2231,6 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="936d32883c4ce7eeffe29c688530c1540b00982e">
-  <div class="header">
-    <h3>app/serializable/serializable_simple_search_notebook.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="never" data-hits="" data-linenumber="1">
-          
-          
-          <code class="ruby"># frozen_string_literal: true</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="2">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class SerializableSimpleSearchNotebook &lt; JSONAPI::Serializable::Resource</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  type &#39;search_notebooks&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  attributes :title, :created_at, :updated_at</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby">end</code>
@@ -5352,8 +5340,8 @@
     <h3>spec/support/controller_support.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5388,16 +5376,52 @@
         <li class="covered" data-hits="10" data-linenumber="5">
           <span class="hits">10</span>
           
-          <code class="ruby">    JSON.parse(response.body).deep_symbolize_keys</code>
+          <code class="ruby">    body = JSON.parse(response.body)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="7">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    if body.is_a?(Array)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      body.map(&amp;:deep_symbolize_keys)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="10">
+          <span class="hits">8</span>
+          
+          <code class="ruby">      body.deep_symbolize_keys</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">end</code>
